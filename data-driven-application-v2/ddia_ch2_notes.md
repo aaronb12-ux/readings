@@ -27,3 +27,16 @@ SELECT posts.*, users.* FROM posts
     ORDER BY posts.timestamp DESC
     LIMIT 1000
 ```
+
+## Timeliness and Polling
+
+Posts should be timely, meaning that once a post is made, we want users to see it within 5 seconds. This would be constantly doing the above query every 5 seconds. This is called **polling** and can be inefficient. It also does not help that the above query is very expensive.
+
+## Materializing and Updating Timelines
+
+Instead of polling, it would be better if the server actively pushed new posts to any followers who are currently online.
+
+We can imagine that each user has a mailbox (home timeline) that stores all posts made by users they are following. Every time a user makes a post, we look up their followers, and insert that post into the mailbox of each follower. Now when a user logs in, we can simply display their mailbox of posts made by those that user is following.
+
+The downside of this is that it requires more work and updating.
+
