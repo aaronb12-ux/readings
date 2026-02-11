@@ -70,7 +70,7 @@ If there is a long queue of requests waiting to be handled, response times may i
 
 ---
 
-If throughput is likely to increase beyond what the current hardware can handle, the capacity needs to be expended; a system is said to be scalable if its maximum throughput is significantly increased by adding computing resources
+If throughput is likely to increase beyond what the current hardware can handle, the capacity needs to be expended; a system is said to be scalable if its maximum throughput is significantly increased by adding computing resources.
 
 ## Latency and Response Times
 
