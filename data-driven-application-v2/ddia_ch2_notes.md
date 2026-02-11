@@ -67,3 +67,13 @@ The number of requests per second, or the data volume per second, that the syste
 ### When Things Go Wrong
 
 If there is a long queue of requests waiting to be handled, response times may increase so much that clients time out and resend their requests. This causes the rate of requests to increase even further. Even if the load is reduced again, the system may stay in this state until it is reset. This is called a **metastable failure**.
+
+---
+
+If throughput is likely to increase beyond what the current hardware can handle, the capacity needs to be expended; a system is said to be scalable if its maximum throughput is significantly increased by adding computing resources
+
+## Latency and Response Times
+
+* The response time is what the client sees; it indicates all delays incurred anywhere in the system
+* The service time is the duration for which the service is actively processing the user request
+* Queuing delays can occur at several points in the flow: for example, after a request is received, it might need to wait until a CPU is available before it can be processed
