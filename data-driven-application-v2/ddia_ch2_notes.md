@@ -77,3 +77,14 @@ If throughput is likely to increase beyond what the current hardware can handle,
 * The response time is what the client sees; it indicates all delays incurred anywhere in the system
 * The service time is the duration for which the service is actively processing the user request
 * Queuing delays can occur at several points in the flow: for example, after a request is received, it might need to wait until a CPU is available before it can be processed
+* Queuing delays often account for a large part of the variability in response times. As a server can only process a small number of things in parallel, it only takes a small amount of slow requests to hold up the processing of subsequent requests - an effect known as head-of-line blocking
+
+## Average, Median, and Percentiles
+
+* Because the response time varies from one request to the next, we need to think of it not as a single number, but as a distribution of values that you can measure
+* It's best to use a median for response times as 50% of users waited longer than the median, and 50% under.
+* Tail latencies are high percentiles of response times
+
+## Use of Response Time Metrics
+
+* When making calls in parallel, it just takes one slow call to make the entire end-user request slow
