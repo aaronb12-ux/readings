@@ -88,3 +88,17 @@ If throughput is likely to increase beyond what the current hardware can handle,
 ## Use of Response Time Metrics
 
 * When making calls in parallel, it just takes one slow call to make the entire end-user request slow
+
+## Reliability and Fault Tolerance
+
+* **Fault:**
+   * A fault is when a particular part of a system stops working correctly: for example if a single hard drive malfunctions, or a single machine crashes, or an external service has an outage
+* **Failure:**
+   * A failure is when the system as a whole stops providing the required service to the user; in other words, when it does not meet the service level objective
+
+## Fault Tolerance
+
+* We call a system fault tolerant if it continues providing the required service to the user in spite of certain faults occurring. If a system cannot tolerate a certain part becoming faulty, we call that part a single point of failure (SPOF), because a fault in that part escalates to cause the failure of the whole system
+* For example, in the social network case study, a fault that might happen is that during the fan-out process, a machine involved in updating the materialized timelines crashes or become unavailable. To make this process fault-tolerant, we would need to ensure that another machine can take over this task without missing any posts that should have been delivered, and without duplicating any posts.
+* A system normally has a fault tolerance that is limited to a certain number of faults. For example a system may be able to tolerate a maximum of two hard drives failing at the same time, or a maximum of one out of three nodes crashing
+* In some systems, it may be necessary to try and increase the amount of faults by purposely triggering them, this is called fault injection and its used to test systems (like error handling)
