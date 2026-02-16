@@ -66,3 +66,11 @@ A D flip-flop copies D to Q on the **rising edge** of the clock, and remembers i
 ### 3.2.4: Register
 
 An **N-bit register** is a bank of N flip-flops that share a common CLK input, so that all bits of the register are updated at the same time.
+
+* **3.2.5: Enabled Flip Flop:**
+   * An enabled flip-flop adds another input called EN or ENABLE to determine whether data is loaded on the clock edge. 
+   * When EN is true, the enabled flip flop behaves like an ordinary D flip-flop
+   * When EN is false, the enabled flip flop ignores the clock and retains its state
+   * An enabled flip flop is useful when we wish to load a new value into a flip-flop only some of the time, rather than on every clock edge
+* **3.2.8: Putting it all together**
+   * Latches and flip flops are the fundamental building blocks of sequential circuits. A D-latch is level sensitive, whereas a D flip-flop is edge-triggered. The D-latch is transparent when CLK = 1, allowing the input D to flow through to the output Q. The D flip-flop copies D to Q on the rising edge of CLK. At all other times, latches and flip flops retain their old state. A register is a bank of several D flip-flops that share a common CLK signal.
