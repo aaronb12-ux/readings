@@ -102,3 +102,15 @@ If throughput is likely to increase beyond what the current hardware can handle,
 * For example, in the social network case study, a fault that might happen is that during the fan-out process, a machine involved in updating the materialized timelines crashes or become unavailable. To make this process fault-tolerant, we would need to ensure that another machine can take over this task without missing any posts that should have been delivered, and without duplicating any posts.
 * A system normally has a fault tolerance that is limited to a certain number of faults. For example a system may be able to tolerate a maximum of two hard drives failing at the same time, or a maximum of one out of three nodes crashing
 * In some systems, it may be necessary to try and increase the amount of faults by purposely triggering them, this is called fault injection and its used to test systems (like error handling)
+
+## Scalability
+
+* Scalability is the term used to define a systems ability to cope with increased load
+* When building a new startup that may not have many users, keeping it as simple and flexible as possible is the goal. At this point, worrying about scalability is counterproductive because it is wasted effort and premature optimization. You can get locked into an inflexible design.
+* Discussing scalability often means asking these sort of questions:
+   * If the system grows in a particular way, what are our options for coping with the growth?
+   * How can we add computing resources to handle the additional load?
+   * Based on current growth projections, when will we hit the limits of our current architecture
+* Once after growing your system and handling more load, you will notice where your bottlenecks lie. This is when you need to focus on what parts of the system you need to scale.
+
+### Describing Load
