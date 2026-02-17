@@ -1,6 +1,6 @@
-Question 1:
+# Question 1:
 
-<img width="355" height="300" alt="Screenshot 2026-02-16 at 6 35 01 PM" src="https://github.com/user-attachments/assets/f81a5c3b-716e-4b62-8365-1cefd1238c47" />
+![Screenshot 2026-02-16 at 6 35 01 PM](https://github.com/user-attachments/assets/f81a5c3b-716e-4b62-8365-1cefd1238c47)
 
 # Ring Oscillator Circuit
 
@@ -8,7 +8,6 @@ Question 1:
 Propagation delay is the time it takes for the output to change value after the input changes.
 
 ## Circuit Behavior
-
 Let **X = 1** initially. Then:
 - Y = 0
 - Z = 1
@@ -21,7 +20,6 @@ This is inconsistent, as after each loop the values are inverted. This circuit h
 - **Even number of inverters** → Stable circuit
 
 ## Timing Analysis
-
 An inverter outputs the opposite of its input, but it takes **1ns** for this to occur in our case.
 
 ### Timing Sequence
